@@ -92,12 +92,6 @@ ol.h{
     font-size: 16px;
 }
 
-.ftext{
-    text-align: center;
-    font-family: Times;
-    font-size: 16px;
-}
-
 table.taba{
     width: 100%;
     border-spacing: 5px;
@@ -131,5 +125,24 @@ table.tabc{
 }
 
 .div1{
-    padding-top: 10px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    padding-right: 0px;
+    padding-left: 5px;
+}
+
+.foot{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 0px;
+    padding-right: 0px;
+    
+    background-color: #d6d6d6;
+}
+
+.ftext{
+    text-align: center;
+    font-family: Times;
+    font-size: 18px;
+    font-weight: bold;
 }
