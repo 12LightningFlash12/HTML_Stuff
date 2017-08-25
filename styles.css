@@ -4,6 +4,13 @@
     font-family: Times;
 }
 
+.ltext{
+    font-family: Times;
+    font-family: 16px;
+    
+    text-decoration: underline;
+}
+
 .par1{
     margin-left: 5px;
     font-weight: bold;
