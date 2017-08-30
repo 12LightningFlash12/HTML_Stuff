@@ -17,7 +17,7 @@
         <title>JavaScript</title>
     </head>
     
-    <body class = "bd">
+    <body class = "bd" onload = "load()">
         <div>
             <h1 class = "header1">JavaScript in Websites</h1>
             
@@ -74,6 +74,16 @@
                 
                 <br>
                 
+                <p class = "par2 text">JavaScript DOM defines:</p>
+                <ul>
+                    <li class = "text">Objects from HTML elements</li>
+                    <li class = "text">HTML element properties</li>
+                    <li class = "text">Methods to access elements</li>
+                    <li class = "text">Events to all HTML elements</li>
+                </ul>
+                
+                <br>
+                
                 <p class = "par1 text">2.2 DOM Methods</p>
                 <p class = "par2 text">In DOM, all HTML elements are defined as objects; methods and properties can be defined for each object. A method is an action that can be done, and a property is a value that can be set. Examples<span class = "btext">(fig 2.2.1)</span>:</p>
                 
@@ -84,7 +94,7 @@
                 
                 <br>
                 
-                <p class = "par2 text">2.3 DOM Elements</p>
+                <p class = "par1 text">2.3 DOM Elements</p>
                 <p class = "par2 text">Using JavaScript, you can find, access, and minipulate any HTML element. You can find elements by:</p>
                 
                 <ul>
@@ -113,7 +123,14 @@
                 <br>
                 <br>
                 
-                <p class = "par1 text">If you want a more indepth tutorial about JavaScript HTML DOM, follow the link below: <a class = "ltext" href = "https://www.w3schools.com/js/js_htmldom.asp">JavaScript DOM</a></p>
+                <p class = "par1 text">If you want a more indepth tutorial about JavaScript DOM, follow the links below:</p>
+                <ul>
+                    <li class = "text"><a class = "ltext" href = "https://www.w3schools.com/js/js_htmldom.asp">JavaScript DOM (w3schools.com)</a></li>
+                    <li class = "text"><a class = "ltext" href = "https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=3&cad=rja&uact=8&ved=0ahUKEwiptfbYg__VAhXG1IMKHQKoB2UQFggvMAI&url=https%3A%2F%2Fdeveloper.mozilla.org%2Fen-US%2Fdocs%2FWeb%2FAPI%2FDocument_Object_Model%2FIntroduction&usg=AFQjCNHgOPGRwDyejRAYIdmkhhFw9-RfvQ">Introduction to the DOM (MDN)</a></li>
+                    <li class = "text"><a class = "ltext" href = "https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=4&cad=rja&uact=8&ved=0ahUKEwiptfbYg__VAhXG1IMKHQKoB2UQFgg6MAM&url=https%3A%2F%2Fdeveloper.mozilla.org%2Fen-US%2Fdocs%2FWeb%2FAPI%2FDocument_Object_Model&usg=AFQjCNE7dSm_qREHNlzG3vfVKJtkwht-6A">Document Object Model (MDN)</a></li>
+                    <li class = "text"><a class = "ltext" href = "https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=5&cad=rja&uact=8&ved=0ahUKEwiptfbYg__VAhXG1IMKHQKoB2UQFghFMAQ&url=https%3A%2F%2Fwww.tutorialspoint.com%2Fjavascript%2Fjavascript_html_dom.htm&usg=AFQjCNHpPAlrL8sG7mZDnUtmVzG6H0FXjA">DOM (TutorialsPoint)</a></li>
+                    <li class = "text"><a class = "ltext" href = "https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=6&cad=rja&uact=8&ved=0ahUKEwiptfbYg__VAhXG1IMKHQKoB2UQFghLMAU&url=http%3A%2F%2Feloquentjavascript.net%2F13_dom.html&usg=AFQjCNGZaDYiy9ToDqPo_08lbUMCjgrHZQ">Document Ogject Model (Eloquent JavaScript)</a></li>
+                </ul>
             </div>
             
             <div class = "col-md-6 borderr">
@@ -126,6 +143,43 @@
                 
                 
                 <p class = "par2 text">Place holding text. Place holding text. Place holding text. Place holding text. Place holding text. Place holding text. Place holding text. Place holding text. Place holding text. Place holding text. Place holding text. Place holding text. Place holding text. </p>
+                
+                <br>
+                <br>
+                
+                <h4 class = "htext">2. JavaScript DOM</h4>
+                
+                <br>
+                
+                <p class = "par1 text">2.1What DOM Is</p>
+                
+                <br><br>
+                
+                <p class = "par1 text">2.2 DOM Methds</p>
+                
+                <br><br>
+                
+                <p class = "par1 text">2.3 DOM Elements</p>
+                
+                <br><br>
+                
+                <p class = "par1 text">2.4 DOM Events</p>
+                
+                <p class = "par2 text">2.4.1 Mouse Click</p>
+                
+                <h5 id = "cl" onclick = "changeText(this)">Click on me</h5>
+                
+                <script>
+                    function changeText(id){
+                        document.getElementById("cl").innerHTML = "You clicked on me!";
+                    }
+                </script>
+                
+                <br>
+                
+                <p class = "par2 text">2.4.2 Webpage Loads</p>
+                
+                <p class = "par2 text">This event was the alert box when the page loaded. You can see this again by reloading the page.</p>
             </div>
         </div>
         
