@@ -17,7 +17,13 @@
         <title>JavaScript</title>
     </head>
     
-    <body class = "bd" onload = "load()">
+    <body class = "bd" onload = "loaded()">
+        <script>
+            function loaded(){
+                alert ("The webpage is 100% loaded!")
+            }
+        </script>
+        
         <div>
             <h1 class = "header1">JavaScript in Websites</h1>
             
@@ -130,6 +136,7 @@
                     <li class = "text"><a class = "ltext" href = "https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=4&cad=rja&uact=8&ved=0ahUKEwiptfbYg__VAhXG1IMKHQKoB2UQFgg6MAM&url=https%3A%2F%2Fdeveloper.mozilla.org%2Fen-US%2Fdocs%2FWeb%2FAPI%2FDocument_Object_Model&usg=AFQjCNE7dSm_qREHNlzG3vfVKJtkwht-6A">Document Object Model (MDN)</a></li>
                     <li class = "text"><a class = "ltext" href = "https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=5&cad=rja&uact=8&ved=0ahUKEwiptfbYg__VAhXG1IMKHQKoB2UQFghFMAQ&url=https%3A%2F%2Fwww.tutorialspoint.com%2Fjavascript%2Fjavascript_html_dom.htm&usg=AFQjCNHpPAlrL8sG7mZDnUtmVzG6H0FXjA">DOM (TutorialsPoint)</a></li>
                     <li class = "text"><a class = "ltext" href = "https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=6&cad=rja&uact=8&ved=0ahUKEwiptfbYg__VAhXG1IMKHQKoB2UQFghLMAU&url=http%3A%2F%2Feloquentjavascript.net%2F13_dom.html&usg=AFQjCNGZaDYiy9ToDqPo_08lbUMCjgrHZQ">Document Ogject Model (Eloquent JavaScript)</a></li>
+                    <li class = "text"><a class = "ltext" href = "https://www.w3schools.com/jsref/dom_obj_event.asp">Full DOM Event List (w3schools.com)</a></li>
                 </ul>
             </div>
             
@@ -155,7 +162,7 @@
                 
                 <br><br>
                 
-                <p class = "par1 text">2.2 DOM Methds</p>
+                <p class = "par1 text">2.2 DOM Methods</p>
                 
                 <br><br>
                 
@@ -168,7 +175,6 @@
                 <p class = "par2 text">2.4.1 Mouse Click</p>
                 
                 <h5 id = "cl" onclick = "changeText(this)">Click on me</h5>
-                
                 <script>
                     function changeText(id){
                         document.getElementById("cl").innerHTML = "You clicked on me!";
@@ -179,7 +185,85 @@
                 
                 <p class = "par2 text">2.4.2 Webpage Loads</p>
                 
-                <p class = "par2 text">This event was the alert box when the page loaded. You can see this again by reloading the page.</p>
+                <p class = "par1 text">Note: this one was the alert box that showed at the begining. to see this again, reload the page.</p>
+                
+                <br>
+                
+                <p class = "par2 text">2.4.3 Image loading</p>
+                
+                <img src = "https://photos-6.dropbox.com/t/2/AAAHjPGUA_RLU2mu_OqJQlWe8vQRr2mjObzRqxQQyEwMLQ/12/665802290/png/32x32/1/_/1/2/figure2-4-3js.png/ENKItLcFGIwBIAcoBw/N6AXYrMo55WNv_sK_xxH7_3EEdjTpfK6Vhm0bB_BIPc?size=1280x960&size_mode=3" onload = "imLoad()">
+                
+                <p id = "imloadout"></p>
+                
+                <script>
+                    function imLoad(){
+                        document.getElementById('imloadout').innerHTML = "The image above is loaded!";
+                    }
+                </script>
+                
+                <br>
+                
+                <p class = "par2 text">2.4.4 Mouse Over an Element</p>
+                
+                <h4 onmouseover = "mouseOver(this)" onmouseout = "mouseOut(this)" id = "mex">Mouse over me! Do it!</h4>
+                <script>
+                    function mouseOver(id){
+                        document.getElementById('mex').innerHTML = "You moused over me. Thank you!";
+                    }
+                    
+                    function mouseOut(id){
+                        document.getElementById('mex').innerHTML = "Mouse over me! Do it!";
+                    }
+                </script>
+                
+                <br>
+                
+                <p class = "par2 text">2.4.5 Changing an Input Field</p>
+                
+                <p class = "par2 text">Write something in the input field below:</p>
+                
+                <input type = "text" id = "in" oninput = "input()">
+                
+                <script>
+                    function input(){
+                        var x = document.getElementById('in').value;
+                        document.getElementById('out').innerHTML = 'You wrote: ' + x;
+                    }
+                </script>
+                
+                <p class = "par2 text" id = "out">You Wrote: </p>
+                
+                <br>
+                
+                <p class = "par2 text">2.4.6 Sumitting a Form</p>
+                
+                <form onsubmit = "sub()">
+                    Enter first name: <input type = "text" name = "fname">
+                    <input type = "submit" value = "Submit">
+                </form>
+                
+                <script>
+                    function sub(){
+                        alert('The form was submitted!');
+                    }
+                </script>
+                
+                <br>
+                
+                <p class = "par2 text">2.4.7 Keystrokes</p>
+                
+                <input type = "text" onkeypressed = "keyPressed(event)">
+                
+                <p class = "par2 text" id = "text">The keyCode: </p>
+                
+                <p class = "par1 text">Note: For some reason I could not get this one to work.</p>
+                
+                <script>
+                    function keyPressed(event){
+                        var a = event.which || event.keyCode;
+                        document.getElementById('text').innerHTML = 'The keyCode: ' + x;
+                    }
+                </script>
             </div>
         </div>
         
